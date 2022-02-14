@@ -21,8 +21,10 @@ pipeline {
             }
         }
         stage('stage2') {
-            scripts {
-					build job: "Java_Job", parameters: [string(name: 'FROM_BUILD', value: "uiux-integral")]
+            steps {
+                scripts {
+                        build job: "Java_Job", parameters: [string(name: 'FROM_BUILD', value: "uiux-integral")]
+                }
             }
         }
     }
