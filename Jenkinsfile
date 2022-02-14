@@ -12,7 +12,7 @@ pipeline {
             steps {
 				echo "Hello"
 				 sh  """
-				 if [ ${target_env} == "target2" ]; then
+				 if [ ${target} == "target2" ]; then
                     echo "hello"
 				 else
                     echo "goodbye"
