@@ -22,7 +22,10 @@ pipeline {
         }
         stage('stage2') {
             steps {
-                    echo "hello"
+                script {
+                    build job: "Java_Job", parameters: []
+                }
+                
             }
         }
     }
