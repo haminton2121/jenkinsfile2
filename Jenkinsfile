@@ -22,7 +22,7 @@ pipeline {
         }
         stage('stage2') {
             steps {
-                    build job: "Java_Job", parameters: [string(name: 'FROM_BUILD', value: "uiux-integral")]
+                    echo "hello"
             }
         }
     }
