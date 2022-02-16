@@ -8,6 +8,16 @@ pipeline {
 		choice(name: 'build', choices: ['build1','build2'], description: 'mode build npm')
     }
     stages {
+		stage('Set Build Version and Env Variable') {
+			steps {
+				script {				
+				def VERSION = VersionNumber projectStartDate: '2018-08-10', versionNumberString: '${BUILD_YEAR}.${BUILD_MONTH,XX}.${BUILD_DAY,XX}.${BUILD_NUMBER}', versionPrefix: ''
+				echo "${VERSION}"
+				env.DPLVERSION="${VERSION}"
+				currentBuild.displayName = VERSION
+                }
+            }
+        }
         stage('Stage1') {
             steps {
 				echo "Hello"
