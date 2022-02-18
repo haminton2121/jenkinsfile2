@@ -13,7 +13,7 @@ pipeline {
                 }
                 checkout([$class: 'GitSCM', branches: [[name: "*/master"]], doGenerateSubmoduleConfigurations: false,
                 extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: '']],
-                submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a4c397e0-078b-49c5-b99f-57ee4c7c103c', url: 'https://github.com/haminton2121/jenkinsfile2.git']]])
+                submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a4c397e0-078b-49c5-b99f-57ee4c7c103c', url: 'https://github.com/haminton2121/Nginx_Docker.git']]])
 
             }
         }
