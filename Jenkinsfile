@@ -20,22 +20,8 @@ pipeline {
         }
         stage('Stage1') {
             steps {
-				echo "Hello"
-				 sh  """
-				 if [ ${target} == "target2" ]; then
-                    echo "hello"
-				 else
-                    echo "goodbye"
-				 fi
-                 """
-            }
-        }
-        stage('stage2') {
-            steps {
-                script {
-                    build job: "Java_Job", parameters: []
-                }
-                
+
+                    echo "ehllo"
             }
         }
     }
